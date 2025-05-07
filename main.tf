@@ -1,11 +1,8 @@
-terraform {
-  required_version = ">= 1.3.0"
+provider "aws" {
+  region = "us-east-1"
 }
 
-provider "null" {}
-
-resource "null_resource" "test" {
-  provisioner "local-exec" {
-    command = "echo GitHub Action works!"
-  }
+resource "aws_s3_bucket" "example" {
+  bucket = "my-gh-actions-bucket-example"
+  
 }
