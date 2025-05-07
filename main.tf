@@ -21,7 +21,7 @@ resource "aws_instance" "test-instance" {
   subnet_id = aws_subnet.test-subnet.id
 
   tags = {
-    Name = "gh-action-instance-test"
+    Name = "gh-action-instance"
   }
 }
 
